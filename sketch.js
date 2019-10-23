@@ -4,7 +4,7 @@ var button;
 
 function preload() {
   cowboy_hat = loadImage("./images/cowboy-hat.png");
-	mustache = loadImage("./images/mustache.png");
+  mustache = loadImage("./images/mustache.png");
   cilinder = loadImage("./images/cilinder.png");
   papillon = loadImage("./images/papillon.png");
   sunglasses = loadImage("./images/sunglasses.png");
@@ -21,11 +21,11 @@ function setup() {
   capture.hide();
 
   cowboy = new Images(300, 300, 100, 40, cowboy_hat);
-	mustache2 = new Images(200, 100, 100, 40, mustache);
-  cilinder3 = new Images(windowWidth-200, 200, 100, 40, cilinder);
-  papillon4 = new Images(windowWidth-300, 500, 100, 40, papillon);
+  mustache2 = new Images(200, 100, 100, 40, mustache);
+  cilinder3 = new Images(windowWidth - 200, 200, 100, 40, cilinder);
+  papillon4 = new Images(windowWidth - 300, 500, 100, 40, papillon);
   sunglasses5 = new Images(300, 600, 100, 40, sunglasses);
-  glasses6 = new Images(windowWidth-200, 650, 100, 40, glasses);
+  glasses6 = new Images(windowWidth - 200, 650, 100, 40, glasses);
 
 
   button = createButton('click to save');
@@ -47,17 +47,17 @@ function draw() {
 
   imageMode(CENTER);
   image(myFeed, windowWidth / 2, windowHeight / 2, 640, 480);
-  image(wood_frame,windowWidth / 2, windowHeight / 2, wood_frame.width, wood_frame.height);
+  image(wood_frame, windowWidth / 2, windowHeight / 2, wood_frame.width, wood_frame.height);
 
   textSize(40);
   textAlign(CENTER);
-  text('accessorize yourself!',windowWidth / 2, 100);
+  text('accessorize yourself!', windowWidth / 2, 100);
 
 
 
   rectMode(CENTER);
   cowboy.display();
-	mustache2.display();
+  mustache2.display();
   cilinder3.display();
   papillon4.display();
   sunglasses5.display();
@@ -73,63 +73,63 @@ function mouseDragged() {
 
   console.log("Mouse dragged");
 
-	var r = cowboy_hat.height/2;
+  var r = cowboy_hat.height / 2;
   var x1 = cowboy.x;
   var y1 = cowboy.y;
 
-  if(dist(x1,y1,mouseX,mouseY)< r) {
+  if (dist(x1, y1, mouseX, mouseY) < r) {
     cowboy.dragged();
   }
 
-    //mustache
+  //mustache
 
-  var r = mustache.width/2;
+  var r = mustache.width / 2;
   var x2 = mustache2.x;
   var y2 = mustache2.y;
 
-  if(dist(x2,y2,mouseX,mouseY)< r) {
+  if (dist(x2, y2, mouseX, mouseY) < r) {
     mustache2.dragged();
   }
 
   //cilinder
 
-var r = cilinder.width/2;
-var x3 = cilinder3.x;
-var y3 = cilinder3.y;
+  var r = cilinder.width / 2;
+  var x3 = cilinder3.x;
+  var y3 = cilinder3.y;
 
-if(dist(x3,y3,mouseX,mouseY)< r) {
-  cilinder3.dragged();
-}
+  if (dist(x3, y3, mouseX, mouseY) < r) {
+    cilinder3.dragged();
+  }
 
-//papillon
+  //papillon
 
-var r = papillon.width/2;
-var x4 = papillon4.x;
-var y4 = papillon4.y;
+  var r = papillon.width / 2;
+  var x4 = papillon4.x;
+  var y4 = papillon4.y;
 
-if(dist(x4,y4,mouseX,mouseY)< r) {
-papillon4.dragged();
-}
+  if (dist(x4, y4, mouseX, mouseY) < r) {
+    papillon4.dragged();
+  }
 
-//sunglasses
+  //sunglasses
 
-var r = sunglasses.height/2;
-var x5 = sunglasses5.x;
-var y5 = sunglasses5.y;
+  var r = sunglasses.height / 2;
+  var x5 = sunglasses5.x;
+  var y5 = sunglasses5.y;
 
-if(dist(x5,y5,mouseX,mouseY)< r) {
-sunglasses5.dragged();
-}
+  if (dist(x5, y5, mouseX, mouseY) < r) {
+    sunglasses5.dragged();
+  }
 
-//glasses
+  //glasses
 
-var r = glasses.height/2;
-var x6 = glasses6.x;
-var y6 = glasses6.y;
+  var r = glasses.height / 2;
+  var x6 = glasses6.x;
+  var y6 = glasses6.y;
 
-if(dist(x6,y6,mouseX,mouseY)< r) {
-glasses6.dragged();
-}
+  if (dist(x6, y6, mouseX, mouseY) < r) {
+    glasses6.dragged();
+  }
 
 
 
